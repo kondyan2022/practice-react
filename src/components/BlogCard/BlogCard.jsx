@@ -14,6 +14,8 @@ import {
   Date,
 } from './BlogCard.styled';
 
+import { formDate } from 'utils/functions.js';
+
 export const BlogCard = ({
   poster,
   tag,
@@ -38,7 +40,7 @@ export const BlogCard = ({
           <Avatar src={avatar} alt={name} />
           <UserInfo>
             <UserName>{name}</UserName>
-            <Date>{postedAt}</Date>
+            <Date>{formDate(postedAt)}</Date>
           </UserInfo>
         </UserBox>
       </CardFooter>
